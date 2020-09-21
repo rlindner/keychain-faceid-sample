@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Keychain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yo-f2-zQU">
+                                <rect key="frame" x="16" y="44" width="382" height="162.5"/>
+                                <mutableString key="text">Launch this sample on a real device supporting Face ID.  Add a keychain item then and kill and relaunch the app. The keychain item will then be read which triggers the Face ID permission dialog. The dialog will be displayed behind our app on the spring board.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-Hl-xn1">
+                                <rect key="frame" x="144" y="222.5" width="126" height="30"/>
+                                <state key="normal" title="Add keychain item"/>
+                                <connections>
+                                    <action selector="addKeychainItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GdA-aA-NQ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYf-bP-wdV">
+                                <rect key="frame" x="135.5" y="260.5" width="143" height="30"/>
+                                <state key="normal" title="Delete keychain item"/>
+                                <connections>
+                                    <action selector="deleteKeychainItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfY-qE-dEZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Yo-f2-zQU" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="16" id="3Sw-Iu-78Y"/>
+                            <constraint firstItem="dYf-bP-wdV" firstAttribute="top" secondItem="rlw-Hl-xn1" secondAttribute="bottom" constant="8" symbolic="YES" id="N4m-Xh-JQy"/>
+                            <constraint firstItem="7Yo-f2-zQU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aa2-FA-lrr"/>
+                            <constraint firstItem="rlw-Hl-xn1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gk1-1O-Arz"/>
+                            <constraint firstItem="7Yo-f2-zQU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hQU-Iw-SoI"/>
+                            <constraint firstItem="rlw-Hl-xn1" firstAttribute="top" secondItem="7Yo-f2-zQU" secondAttribute="bottom" constant="16" id="qe6-QO-TuC"/>
+                            <constraint firstItem="dYf-bP-wdV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uph-O1-vIO"/>
+                            <constraint firstItem="7Yo-f2-zQU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="z75-Ch-Hkq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
